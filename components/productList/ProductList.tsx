@@ -1,11 +1,10 @@
-import { styles } from './ProductList.styles';
 import { Feather } from '@expo/vector-icons';
 import type { ReactNode } from 'react';
 import { FlatList, Pressable, Text, useWindowDimensions, View } from 'react-native';
 
 import type { Category, Product } from '@/constants/products';
 import ProductCard from './ProductCard';
-
+import { styles } from './styles/ProductList';
 
 type ProductListProps = {
   products: Product[];
@@ -23,7 +22,7 @@ export default function ProductList({ products, query, category, sortLabel, onSo
   const columns = width >= 1050 ? 4 : wide ? 3 : 2;
   return (
     <FlatList
-      key={columns}w
+      key={columns}
       data={products}
       numColumns={columns}
       keyExtractor={(item) => item.id}

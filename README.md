@@ -33,6 +33,5 @@ npm run web
 ## 검사
 
 ```sh
-npx tsc --noEmit
-npm run lint
+npm run check
 ```
