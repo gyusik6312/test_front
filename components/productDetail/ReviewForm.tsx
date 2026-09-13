@@ -1,15 +1,15 @@
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 import { Image, Pressable, Text, TextInput, View } from 'react-native';
-import { useTemporaryReviews } from './TemporaryReviews';
+import { useTemporaryReviews, type Review } from './TemporaryReviews';
 import { styles } from './ReviewForm.ts';
 
-export default function ReviewForm({ productId, onClose }: { productId: string; onClose: () => void }) {
-  const { add } = useTemporaryReviews();
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
-  const [rating, setRating] = useState(0);
-  const [photos, setPhotos] = useState<string[]>([]);
+export default function ReviewForm({ productId, review, onClose }: { productId: string; review?: Review; onClose: () => void }) {
+  const { add, update } = useTemporaryReviews();
+  const [title, setTitle] = useState(review?.title ?? '');
+  const [body, setBody] = useState(review?.body ?? '');
+  const [rating, setRating] = useState(review?.rating ?? 0);
+  const [photos, setPhotos] = useState<string[]>(review?.photos ?? []);
   const [error, setError] = useState('');
   const [picking, setPicking] = useState(false);
   const pick = async () => {
@@ -29,8 +29,9 @@ export default function ReviewForm({ productId, onClose }: { productId: string; 
   const submit = () => {
     if (!title.trim()) return setError('후기 제목을 입력해 주세요.');
     if (!rating) return setError('별점을 선택해 주세요.');
-    if (add(productId, { title, body, rating, photos })) onClose();
-    else setError('후기를 등록할 수 없습니다. 본인 상품이거나 삭제된 상품인지 확인해 주세요.');
+    const draft = { title, body, rating, photos };
+    if (review ? update(review.id, draft) : add(productId, draft)) onClose();
+    else setError('후기를 저장할 수 없습니다. 작성 권한이나 상품·후기 삭제 여부를 확인해 주세요.');
   };
   return (
     <View style={styles.form}>
@@ -46,7 +47,7 @@ export default function ReviewForm({ productId, onClose }: { productId: string; 
       {!!error && <Text accessibilityRole="alert" style={styles.error}>{error}</Text>}
       <View style={styles.row}>
         <Pressable accessibilityRole="button" onPress={onClose} style={styles.button}><Text>취소</Text></Pressable>
-        <Pressable accessibilityRole="button" disabled={picking} onPress={submit} style={[styles.button, styles.primary, picking && styles.disabled]}><Text style={styles.white}>후기 등록</Text></Pressable>
+        <Pressable accessibilityRole="button" disabled={picking} onPress={submit} style={[styles.button, styles.primary, picking && styles.disabled]}><Text style={styles.white}>{review ? '수정 완료' : '후기 등록'}</Text></Pressable>
       </View>
     </View>
   );

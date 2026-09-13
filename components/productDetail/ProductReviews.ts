@@ -2,6 +2,9 @@ import { StyleSheet } from 'react-native';
 import { colors } from '@/constants/design';
 
 export const styles = StyleSheet.create({
+  action: { minHeight: 44, paddingHorizontal: 16, justifyContent: 'center', borderRadius: 8, backgroundColor: colors.background },
+  error: { fontSize: 13, lineHeight: 20, color: '#AE4949' },
+  confirm: { padding: 16, gap: 12, borderRadius: 12, backgroundColor: '#FFF4F4' },
   writeButton: { alignSelf: 'flex-start', padding: 14, minHeight: 44, borderRadius: 10, backgroundColor: colors.primary },
   writeText: { color: '#fff', fontSize: 13, fontWeight: '600' },
   photos: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
