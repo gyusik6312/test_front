@@ -15,9 +15,9 @@ export default function LoginScreen() {
         <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
           <View style={styles.brand}>
             <View style={styles.brandIcon}><Feather name="box" size={25} color="#fff" /></View>
-            <Text style={styles.brandName}>모아<Text style={styles.brandDot}>.</Text></Text>
+            <Text style={styles.brandName}>test</Text>
           </View>
-          <Text style={styles.tagline}>취향과 취향 사이, 모아</Text>
+          <Text style={styles.tagline}>취향과 취향 사이, test</Text>
           <View style={styles.card}>
             <View style={styles.welcomeIcon}><Feather name="smile" size={26} color={colors.primary} /></View>
             <Text accessibilityRole="header" style={styles.title}>다시 만나 반가워요</Text>
@@ -25,7 +25,7 @@ export default function LoginScreen() {
             <LoginForm />
           </View>
           <Text style={styles.footer}>물건의 다음 이야기가 시작되는 곳</Text>
-          <Text style={styles.copyright}>© 모아</Text>
+          <Text style={styles.copyright}>© test</Text>
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>

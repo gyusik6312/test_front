@@ -11,6 +11,5 @@ export const styles = StyleSheet.create({
   brand: { flexDirection: 'row', alignItems: 'center', gap: 9 },
   brandIcon: { backgroundColor: colors.primary, borderRadius: 12, padding: 9 },
   brandName: { fontSize: 26, fontWeight: '800', color: colors.text, letterSpacing: -1.2 },
-  brandDot: { color: colors.primary },
   headerNote: { fontSize: 12, color: colors.secondary, flexShrink: 1, textAlign: 'right' },
 });
