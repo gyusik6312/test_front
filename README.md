@@ -26,7 +26,7 @@ npm run web
 
 화면 파일은 `screen/기능명Screen.tsx`, 컴포넌트는 `components/기능명/컴포넌트명.tsx` 규칙으로 작성합니다. `app/`에는 Expo Router 라우트만 둡니다.
 
-컴포넌트 스타일은 각 기능 폴더의 `styles/컴포넌트명.ts`에서 관리합니다. 화면 스타일은 `screen/styles/화면명.ts`에 둡니다. 공통 색상과 화면 너비는 `constants/design.ts`를 사용합니다.
+스타일은 컴포넌트와 같은 폴더의 같은 이름인 `.ts` 파일에서 관리합니다. 예를 들어 `components/search/`에 `ProductSearch.tsx`, `ProductSearch.ts`, `ProductSearchBar.tsx`, `ProductSearchBar.ts`를 함께 둡니다. 화면도 `screen/ProductListScreen.tsx`와 `screen/ProductListScreen.ts`를 나란히 둡니다. 같은 이름의 파일을 구분하도록 import에 `.tsx` 또는 `.ts` 확장자를 명시합니다. 공통 색상과 화면 너비는 `constants/design.ts`를 사용합니다.
 
 현재 백엔드 서버는 없으며 샘플 데이터를 사용합니다. 상품 이미지는 외부 URL에서 불러옵니다.
 

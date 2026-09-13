@@ -1,5 +1,5 @@
+import { styles } from './ProductSearchBar.ts';
 import { colors } from '@/constants/design';
-import { styles } from './styles/ProductSearchBar';
 import { Feather } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Pressable, TextInput, View } from 'react-native';

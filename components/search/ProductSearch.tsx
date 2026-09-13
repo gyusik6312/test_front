@@ -1,7 +1,7 @@
-import { styles } from './styles/ProductSearch';
-import { Text, useWindowDimensions, View } from 'react-native';
+import { styles } from './ProductSearch.ts';
+import { Text, View, useWindowDimensions } from 'react-native';
 
-import ProductSearchBar from './ProductSearchBar';
+import ProductSearchBar from './ProductSearchBar.tsx';
 
 
 type ProductSearchProps = {

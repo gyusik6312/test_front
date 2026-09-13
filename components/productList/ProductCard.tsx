@@ -1,4 +1,4 @@
-import { styles } from './styles/ProductCard';
+import { styles } from './ProductCard.ts';
 import { Feather } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Image, Text, View } from 'react-native';

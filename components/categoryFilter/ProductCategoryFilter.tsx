@@ -1,4 +1,4 @@
-import { styles } from './styles/ProductCategoryFilter';
+import { styles } from './ProductCategoryFilter.ts';
 import { Pressable, ScrollView, Text } from 'react-native';
 
 import { categories, type Category } from '@/constants/products';

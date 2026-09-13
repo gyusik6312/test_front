@@ -1,6 +1,6 @@
-import { styles } from './styles/MarketHeader';
+import { styles } from './MarketHeader.ts';
 import { Feather } from '@expo/vector-icons';
-import { Text, useWindowDimensions, View } from 'react-native';
+import { Text, View, useWindowDimensions } from 'react-native';
 
 
 export default function MarketHeader() {

@@ -1,10 +1,10 @@
+import { styles } from './ProductList.ts';
 import { Feather } from '@expo/vector-icons';
 import type { ReactNode } from 'react';
-import { FlatList, Pressable, Text, useWindowDimensions, View } from 'react-native';
+import { FlatList, Pressable, Text, View, useWindowDimensions } from 'react-native';
 
 import type { Category, Product } from '@/constants/products';
-import ProductCard from './ProductCard';
-import { styles } from './styles/ProductList';
+import ProductCard from './ProductCard.tsx';
 
 type ProductListProps = {
   products: Product[];

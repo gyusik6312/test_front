@@ -1,1 +1,1 @@
-export { default } from '@/screen/ProductListScreen';
+export { default } from '@/screen/ProductListScreen.tsx';
