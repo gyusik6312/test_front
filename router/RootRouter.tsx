@@ -11,6 +11,7 @@ function SessionRoutes() {
       </Stack.Protected>
       <Stack.Protected guard={!!user}>
         <Stack.Screen name="index" />
+        <Stack.Screen name="mypage" />
       </Stack.Protected>
     </Stack>
   );
