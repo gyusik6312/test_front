@@ -22,5 +22,5 @@ export const styles = StyleSheet.create({
   footerBrand: { color: '#738471', fontWeight: '800', fontSize: 20 },
   footerText: { color: colors.secondary, fontSize: 12 },
   sampleNote: { color: colors.secondary, fontSize: 11, marginTop: 5 },
-  buttonPressed: { opacity: 0.7 },
+  buttonPressed: { opacity: 0.7 }, 
 });

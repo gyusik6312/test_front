@@ -7,6 +7,8 @@ export type Product = {
   price: number;
   category: Exclude<Category, '전체'>;
   image: string;
+  description?: string;
+  ownerEmail?: string;
 };
 
 // Initial screen fixtures. Replace with the product API when it is connected.
