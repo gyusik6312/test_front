@@ -19,7 +19,6 @@ export const styles = StyleSheet.create({
   sellerText: { flex: 1, gap: 4 },
   caption: { fontSize: 12, lineHeight: 20, color: colors.muted },
   body: { fontSize: 14, lineHeight: 25, color: colors.secondary },
-  meta: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
   section: { backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border, borderRadius: 18, padding: 24, gap: 18 },
   sectionTitle: { fontSize: 18, fontWeight: '700', color: colors.text },
   empty: { flex: 1, minHeight: 220, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 18 },

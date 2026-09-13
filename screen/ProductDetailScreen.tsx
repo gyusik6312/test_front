@@ -47,8 +47,7 @@ export default function ProductDetailScreen() {
                   <Feather name="user" size={24} color={colors.primary} />
                   <View style={styles.sellerText}><Text style={styles.caption}>판매자</Text><Text style={styles.body}>{product.ownerEmail?.split('@')[0] || '샘플 판매자'}</Text></View>
                 </View>
-                <View style={styles.meta}><Text style={styles.caption}>상품 상태</Text><Text style={styles.body}>{sample?.condition ?? '판매자 설명 참고'}</Text></View>
-                <Text style={styles.caption}>{sample ? '샘플 상품입니다. 상품 설명·상태·후기는 화면 확인용 예시입니다.' : '임시 등록 상품입니다. 거래 방식은 판매자와 확인해 주세요.'}</Text>
+                {!sample && <Text style={styles.caption}>임시 등록 상품입니다. 거래 방식은 판매자와 확인해 주세요.</Text>}
               </View>
             </View>
             <View style={styles.section}>
