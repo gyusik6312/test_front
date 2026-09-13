@@ -5,6 +5,7 @@ import { ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import AccountActions from '@/components/mypage/AccountActions.tsx';
+import MyProducts from '@/components/mypage/MyProducts.tsx';
 import { colors } from '@/constants/design';
 import { useTemporarySession } from '@/router/TemporarySession';
 import { styles } from './MyPageScreen.ts';
@@ -29,6 +30,7 @@ export default function MyPageScreen() {
           </View>
         </View>
 
+        <MyProducts />
         <Text accessibilityRole="header" style={styles.sectionTitle}>계정 관리</Text>
         <AccountActions />
       </ScrollView>
