@@ -41,7 +41,7 @@ export default function ProductList({ products, query, category, sortLabel, onSo
         </View>
       }
       ListEmptyComponent={<View style={styles.empty}><Feather name="search" size={30} color="#8c9b90" /><Text style={styles.emptyTitle}>찾으시는 물건이 아직 없어요</Text><Text style={styles.emptyDescription}>다른 검색어나 카테고리로 찾아보세요.</Text><Pressable accessibilityRole="button" onPress={onReset} style={({ pressed }) => [styles.reset, pressed && styles.buttonPressed]}><Text style={styles.resetText}>전체 상품 보기</Text></Pressable></View>}
-      ListFooterComponent={<View style={styles.footer}><Text style={styles.footerBrand}>모아.</Text><Text style={styles.footerText}>물건의 다음 이야기가 시작되는 곳</Text><Text style={styles.sampleNote}>지금은 샘플 상품을 둘러보고 있어요.</Text></View>}
+      ListFooterComponent={<View style={styles.footer}><Text style={styles.footerBrand}>test</Text><Text style={styles.footerText}>물건의 다음 이야기가 시작되는 곳</Text><Text style={styles.sampleNote}>지금은 샘플 상품을 둘러보고 있어요.</Text></View>}
     />
   );
 }
