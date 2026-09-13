@@ -1,5 +1,1 @@
-import { Stack } from 'expo-router';
-
-export default function RootNavigator() {
-  return <Stack screenOptions={{ headerShown: false }} />;
-}
+export { default } from '@/router/RootRouter';

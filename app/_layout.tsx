@@ -1,1 +1,1 @@
-export { default } from '@/navigation/RootNavigator';
+export { default } from '@/router/RootRouter';
