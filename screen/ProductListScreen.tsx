@@ -1,5 +1,4 @@
 import { styles } from './ProductListScreen.ts';
-import { colors } from '@/constants/design';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -8,9 +7,10 @@ import MarketHeader from '@/components/layout/MarketHeader.tsx';
 import ProductList from '@/components/productList/ProductList.tsx';
 import ProductSearch from '@/components/search/ProductSearch.tsx';
 import { useProductSearch } from '@/components/search/useProductSearch';
-import { products } from '@/constants/products';
+import { useTemporaryProducts } from '@/components/productList/TemporaryProducts';
 
 export default function ProductListScreen() {
+  const { products } = useTemporaryProducts();
   const search = useProductSearch(products);
 
   return (

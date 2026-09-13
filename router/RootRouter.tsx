@@ -1,4 +1,5 @@
 import { Stack } from 'expo-router';
+import { TemporaryProductsProvider } from '@/components/productList/TemporaryProducts';
 
 import { TemporarySessionProvider, useTemporarySession } from './TemporarySession';
 
@@ -11,11 +12,12 @@ function SessionRoutes() {
       </Stack.Protected>
       <Stack.Protected guard={!!user}>
         <Stack.Screen name="index" />
+        <Stack.Screen name="mypage" />
       </Stack.Protected>
     </Stack>
   );
 }
 
 export default function RootRouter() {
-  return <TemporarySessionProvider><SessionRoutes /></TemporarySessionProvider>;
+  return <TemporarySessionProvider><TemporaryProductsProvider><SessionRoutes /></TemporaryProductsProvider></TemporarySessionProvider>;
 }
